@@ -26,7 +26,6 @@ $light-input-color: #c2d16c;
 $light-body-bg-clr: rgb(198, 228, 233);
 $light-text-clr: #000;
 $light-shadow: #000000;
-$light-shadow-transparent: #00000019;
 $light-card-bg-clr: #fff;
 
 $root: (
@@ -35,7 +34,6 @@ $root: (
     body-bg-clr: $light-body-bg-clr,
     text-clr: $light-text-clr,
     shadow: $light-shadow,
-    shadow-transparent: $light-shadow-transparent,
     card-bg-clr: $light-card-bg-clr,
 );
 
@@ -46,7 +44,6 @@ $dark-input-color: #294797;
 $dark-body-bg-clr: rgb(16, 26, 39);
 $dark-text-clr: #fff;
 $dark-shadow: #ffffff;
-$dark-shadow-transparent: #ffffff19;
 $dark-card-bg-clr: #000;
 
 $dark_mode: (
@@ -55,12 +52,11 @@ $dark_mode: (
     body-bg-clr: $dark-body-bg-clr,
     text-clr: $dark-text-clr,
     shadow: $dark-shadow,
-    shadow-transparent: $dark-shadow-transparent,
     card-bg-clr: $dark-card-bg-clr,
 );
 
 $iterator: 5;
-$max-iteration: 10;
+$max-iteration: 15;
 
 /* -better - darken in light mode / lighten in dark mode */
 /* -worse - lighten in light mode / darken in dark mode */
@@ -236,7 +232,6 @@ body {
     }
     &__menu {
         background-color: var(--body-bg-clr);
-        padding: 0 0.75rem;
         box-shadow: 0 0 5px 1px var(--shadow);
         pointer-events: none;
         transition: $transition;
@@ -252,13 +247,9 @@ body {
                 height: 100%;
                 cursor: pointer;
                 transition: $transition;
-                margin-block: 0.5rem;
                 background-color: var(--body-bg-clr-better-10);
-                border-radius: 0.7rem;
+                box-shadow: 0 0 5px 1px var(--body-bg-clr-better-5);
                 padding: 0.5rem 1rem;
-                &:hover {
-                    transform: scale(1.1);
-                }
                 a {
                     transition: $transition;
                     pointer-events: auto;
@@ -290,6 +281,7 @@ body {
             display: none;
         }
         &__menu {
+            padding: 0 0.75rem;
             &[closed] {
                 display: unset;
             }
@@ -297,7 +289,12 @@ body {
                 display: flex;
                 flex-wrap: wrap;
                 li {
-                    margin-inline: 0.5rem;
+                    margin: 0.5rem;
+                    border-radius: 0.7rem;
+                    &:hover {
+                        transform: scale(1.1);
+                        background-color: var(--body-bg-clr-better-15);
+                    }
                 }
             }
         }

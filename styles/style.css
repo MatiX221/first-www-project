@@ -6,36 +6,43 @@
   --input-back-worse-5: #eaeaea;
   --input-back-better-10: #c4c4c4;
   --input-back-worse-10: #f7f7f7;
+  --input-back-better-15: #b7b7b7;
+  --input-back-worse-15: white;
   --input-color: #c2d16c;
   --input-color-better-5: #bacb59;
   --input-color-worse-5: #cad77f;
   --input-color-better-10: #b2c545;
   --input-color-worse-10: #d2dd93;
+  --input-color-better-15: #a4b739;
+  --input-color-worse-15: #dae3a6;
   --body-bg-clr: rgb(198, 228, 233);
   --body-bg-clr-better-5: #b4dbe2;
   --body-bg-clr-worse-5: #d8edf0;
   --body-bg-clr-better-10: #a1d3db;
   --body-bg-clr-worse-10: #ebf5f7;
+  --body-bg-clr-better-15: #8fcad4;
+  --body-bg-clr-worse-15: #fdfefe;
   --text-clr: #000;
   --text-clr-better-5: black;
   --text-clr-worse-5: #0d0d0d;
   --text-clr-better-10: black;
   --text-clr-worse-10: #1a1a1a;
+  --text-clr-better-15: black;
+  --text-clr-worse-15: #262626;
   --shadow: #000000;
   --shadow-better-5: black;
   --shadow-worse-5: #0d0d0d;
   --shadow-better-10: black;
   --shadow-worse-10: #1a1a1a;
-  --shadow-transparent: rgba(0, 0, 0, 0.0980392157);
-  --shadow-transparent-better-5: rgba(0, 0, 0, 0.0980392157);
-  --shadow-transparent-worse-5: rgba(13, 13, 13, 0.0980392157);
-  --shadow-transparent-better-10: rgba(0, 0, 0, 0.0980392157);
-  --shadow-transparent-worse-10: rgba(26, 26, 26, 0.0980392157);
+  --shadow-better-15: black;
+  --shadow-worse-15: #262626;
   --card-bg-clr: #fff;
   --card-bg-clr-better-5: #f2f2f2;
   --card-bg-clr-worse-5: white;
   --card-bg-clr-better-10: #e6e6e6;
   --card-bg-clr-worse-10: white;
+  --card-bg-clr-better-15: #d9d9d9;
+  --card-bg-clr-worse-15: white;
 }
 
 .dark_mode {
@@ -44,36 +51,43 @@
   --input-back-worse-5: #090909;
   --input-back-better-10: #303030;
   --input-back-worse-10: black;
+  --input-back-better-15: #3c3c3c;
+  --input-back-worse-15: black;
   --input-color: #294797;
   --input-color-better-5: #2e50ab;
   --input-color-worse-5: #243e83;
   --input-color-better-10: #345abf;
   --input-color-worse-10: #1e346f;
+  --input-color-better-15: #4167cb;
+  --input-color-worse-15: #192b5b;
   --body-bg-clr: rgb(16, 26, 39);
   --body-bg-clr-better-5: #172639;
   --body-bg-clr-worse-5: #090e15;
   --body-bg-clr-better-10: #1f324b;
   --body-bg-clr-worse-10: #010203;
+  --body-bg-clr-better-15: #263e5d;
+  --body-bg-clr-worse-15: black;
   --text-clr: #fff;
   --text-clr-better-5: white;
   --text-clr-worse-5: #f2f2f2;
   --text-clr-better-10: white;
   --text-clr-worse-10: #e6e6e6;
+  --text-clr-better-15: white;
+  --text-clr-worse-15: #d9d9d9;
   --shadow: #ffffff;
   --shadow-better-5: white;
   --shadow-worse-5: #f2f2f2;
   --shadow-better-10: white;
   --shadow-worse-10: #e6e6e6;
-  --shadow-transparent: rgba(255, 255, 255, 0.0980392157);
-  --shadow-transparent-better-5: rgba(255, 255, 255, 0.0980392157);
-  --shadow-transparent-worse-5: rgba(242, 242, 242, 0.0980392157);
-  --shadow-transparent-better-10: rgba(255, 255, 255, 0.0980392157);
-  --shadow-transparent-worse-10: rgba(230, 230, 230, 0.0980392157);
+  --shadow-better-15: white;
+  --shadow-worse-15: #d9d9d9;
   --card-bg-clr: #000;
   --card-bg-clr-better-5: #0d0d0d;
   --card-bg-clr-worse-5: black;
   --card-bg-clr-better-10: #1a1a1a;
   --card-bg-clr-worse-10: black;
+  --card-bg-clr-better-15: #262626;
+  --card-bg-clr-worse-15: black;
 }
 
 *,
@@ -252,7 +266,6 @@ body {
 }
 .nav__menu {
   background-color: var(--body-bg-clr);
-  padding: 0 0.75rem;
   -webkit-box-shadow: 0 0 5px 1px var(--shadow);
           box-shadow: 0 0 5px 1px var(--shadow);
   pointer-events: none;
@@ -274,14 +287,10 @@ body {
   cursor: pointer;
   -webkit-transition: all 600ms -200ms ease-in-out;
   transition: all 600ms -200ms ease-in-out;
-  margin-block: 0.5rem;
   background-color: var(--body-bg-clr-better-10);
-  border-radius: 0.7rem;
+  -webkit-box-shadow: 0 0 5px 1px var(--body-bg-clr-better-5);
+          box-shadow: 0 0 5px 1px var(--body-bg-clr-better-5);
   padding: 0.5rem 1rem;
-}
-.nav__menu ul li:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 .nav__menu ul li a {
   -webkit-transition: all 600ms -200ms ease-in-out;
@@ -314,6 +323,9 @@ body {
   .nav__logo {
     display: none;
   }
+  .nav__menu {
+    padding: 0 0.75rem;
+  }
   .nav__menu[closed] {
     display: unset;
   }
@@ -325,7 +337,13 @@ body {
         flex-wrap: wrap;
   }
   .nav__menu ul li {
-    margin-inline: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 0.7rem;
+  }
+  .nav__menu ul li:hover {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    background-color: var(--body-bg-clr-better-15);
   }
 }
 
