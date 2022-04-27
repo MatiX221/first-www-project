@@ -41,7 +41,7 @@ $root: (
 
 $dark-input-back: #161616;
 $dark-input-color: #294797;
-$dark-body-bg-clr: rgb(16, 26, 39);
+$dark-body-bg-clr: #192639;
 $dark-text-clr: #fff;
 $dark-shadow: #ffffff;
 $dark-card-bg-clr: #000;
@@ -141,7 +141,6 @@ body {
         width: 50px;
         height: 20px;
         position: relative;
-        cursor: pointer;
         cursor: pointer;
     }
     .background {

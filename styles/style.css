@@ -60,13 +60,13 @@
   --input-color-worse-10: #1e346f;
   --input-color-better-15: #4167cb;
   --input-color-worse-15: #192b5b;
-  --body-bg-clr: rgb(16, 26, 39);
-  --body-bg-clr-better-5: #172639;
-  --body-bg-clr-worse-5: #090e15;
-  --body-bg-clr-better-10: #1f324b;
-  --body-bg-clr-worse-10: #010203;
-  --body-bg-clr-better-15: #263e5d;
-  --body-bg-clr-worse-15: black;
+  --body-bg-clr: #192639;
+  --body-bg-clr-better-5: #21324b;
+  --body-bg-clr-worse-5: #111a27;
+  --body-bg-clr-better-10: #293e5c;
+  --body-bg-clr-worse-10: #090e16;
+  --body-bg-clr-better-15: #30496e;
+  --body-bg-clr-worse-15: #020304;
   --text-clr: #fff;
   --text-clr-better-5: white;
   --text-clr-worse-5: #f2f2f2;
@@ -154,7 +154,6 @@ body {
   width: 50px;
   height: 20px;
   position: relative;
-  cursor: pointer;
   cursor: pointer;
 }
 #theme_changer .background {
