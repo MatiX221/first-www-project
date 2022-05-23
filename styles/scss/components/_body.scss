@@ -1,0 +1,47 @@
+@use "../abstracts/variables" as *;
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--body-bg-clr);
+    color: var(--text-clr);
+    transition: $transition;
+    height: 100vh;
+    width: 100vw;
+    line-height: 1.4rem;
+    &.dark_mode {
+        input,
+        textarea {
+            background-color: #2b2a33;
+        }
+    }
+}
+
+input {
+    border: 1px solid;
+}
+
+.page {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+.main {
+    padding: 0 1rem 1.5rem 1rem;
+    transition: $transition;
+    &[opening] {
+        animation: main_opening 500ms forwards;
+    }
+    &[closing] {
+        animation: main_closing 500ms forwards;
+    }
+    p {
+        transition: $transition;
+    }
+}

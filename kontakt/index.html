@@ -46,16 +46,26 @@
                 </ul>
             </div>
             <div class="main">
-                <form action="mailto:mati0103pl229@gmail.com">
-                    <label for="imie">Imię:</label>
-                    <input type="text" id="imie" name="imie" required />
-                    <label for="nazwisko">Nazwisko:</label>
-                    <input type="text" id="nazwisko" name="nazwisko" required />
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required />
-                    <input type="submit" value="Wyślij" />
-                    <input type="reset" value="Reset" />
-                </form>
+                <div class="contact">
+                    <div class="contact__photo asuna">
+                        <img src="../images/kontakt/asuna.png" alt="" srcset="" />
+                    </div>
+                    <form class="contact__form" action="mailto:mati0103pl229@gmail.com">
+                        <label for="imie">Imię:</label>
+                        <input type="text" id="imie" name="imie" required />
+                        <label for="nazwisko">Nazwisko:</label>
+                        <input type="text" id="nazwisko" name="nazwisko" required />
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                        <label for="message">Wiadomość:</label>
+                        <textarea id="message" name="message"></textarea>
+                        <input type="submit" value="Wyślij" />
+                        <input type="reset" value="Reset" />
+                    </form>
+                    <div class="contact__photo kirito">
+                        <img src="../images/kontakt/kirito.png" alt="" srcset="" />
+                    </div>
+                </div>
             </div>
             <div class="footer">
                 <p>Autor: Mateusz Piasecki 2C</p>

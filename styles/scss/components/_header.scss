@@ -1,0 +1,21 @@
+@use "../abstracts/variables" as *;
+
+.header {
+    z-index: 2;
+    display: flex;
+    transition: $transition;
+    box-shadow: 0 0 5px 1px var(--shadow);
+    background-color: var(--body-bg-clr);
+    .heading {
+        transition: $transition;
+        color: var(--text-clr);
+        padding-left: 1rem;
+        a {
+            text-decoration: none;
+            color: var(--text-clr);
+        }
+        h1 {
+            transition: $transition;
+        }
+    }
+}

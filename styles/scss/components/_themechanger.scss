@@ -1,0 +1,61 @@
+@use "../abstracts/variables" as *;
+
+#theme_changer {
+    margin-inline: auto 1rem;
+    margin-block: auto;
+    padding: 1rem;
+    position: relative;
+    &__label {
+        transition: $transition;
+        width: 50px;
+        height: 20px;
+        cursor: pointer;
+    }
+    .background {
+        width: 50px;
+        height: 20px;
+        background-color: var(--input-back);
+        border-radius: 30px;
+        transition: $transition;
+    }
+    .switch {
+        box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+        height: 30px;
+        width: 30px;
+        background-color: var(--input-color);
+        position: absolute;
+        top: 10px;
+        left: 15px;
+        border-radius: 50%;
+        transition: $transition;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            width: 60%;
+            height: auto;
+            position: absolute;
+            transition: $transition;
+        }
+        transition: $transition;
+        .sun {
+            opacity: 1;
+        }
+        .moon {
+            opacity: 0;
+        }
+    }
+    input {
+        transition: $transition;
+        display: none;
+        &:checked + .switch {
+            transform: translatex(25px);
+            .sun {
+                opacity: 0;
+            }
+            .moon {
+                opacity: 1;
+            }
+        }
+    }
+}

@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+.footer {
+    width: 100vw;
+    padding: 0;
+    margin-top: auto;
+    background-color: var(--body-bg-clr);
+    box-shadow: 0 0 5px 1px var(--shadow);
+    transition: $transition;
+    > * {
+        transition: $transition;
+        margin: 0;
+        padding: 0.15rem 0.3rem;
+    }
+    p {
+        color: var(--text-clr);
+    }
+}
+
+.logo {
+    position: fixed;
+    bottom: 35px;
+    right: 0%;
+    transform: rotate(-18deg);
+    img {
+        height: 1.5rem;
+    }
+}

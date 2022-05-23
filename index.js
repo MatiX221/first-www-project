@@ -54,7 +54,7 @@ window.onload = () => {
                 main.removeAttribute( "closing", "" );
                 nav_logo.setAttribute( "canclick", "" );
 
-            }, 490 )
+            }, 499 )
 
         } else if ( nav_logo.getAttribute( "canclick" ) === "" ) {
             nav_menu.removeAttribute( "closed" );
@@ -68,7 +68,7 @@ window.onload = () => {
                 main.removeAttribute( "opening", "" );
                 nav_logo.setAttribute( "canclick", "" );
 
-            }, 490 )
+            }, 499 )
         } else {
 
         }

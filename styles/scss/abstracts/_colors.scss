@@ -1,0 +1,72 @@
+@use "sass:map";
+
+/// light
+$light-input-back: #ccc;
+$light-input-color: #abbe65;
+$light-body-bg-clr: #ffffff;
+$light-text-clr: #000;
+$light-shadow: #000000;
+$light-card-bg-clr: #fff;
+
+$root: (
+    input-back: $light-input-back,
+    input-color: $light-input-color,
+    body-bg-clr: $light-body-bg-clr,
+    text-clr: $light-text-clr,
+    shadow: $light-shadow,
+    card-bg-clr: $light-card-bg-clr,
+);
+
+/// dark
+
+$dark-input-back: #303030;
+$dark-input-color: #294797;
+$dark-body-bg-clr: #181818;
+$dark-text-clr: #fff;
+$dark-shadow: #ffffff;
+$dark-card-bg-clr: #000;
+
+$dark_mode: (
+    input-back: $dark-input-back,
+    input-color: $dark-input-color,
+    body-bg-clr: $dark-body-bg-clr,
+    text-clr: $dark-text-clr,
+    shadow: $dark-shadow,
+    card-bg-clr: $dark-card-bg-clr,
+);
+
+$iterator: 5;
+$max-iteration: 15;
+
+/* -better - darken in light mode / lighten in dark mode */
+/* -worse - lighten in light mode / darken in dark mode */
+
+:root {
+    color-scheme: light;
+    @each $name, $value in $root {
+        --#{$name}: #{$value};
+        $change-value: $iterator;
+        @while $change-value <= $max-iteration {
+            $light-value: lighten($value, $change-value);
+            $dark-value: darken($value, $change-value);
+            --#{$name}-better-#{$change-value}: #{$dark-value};
+            --#{$name}-worse-#{$change-value}: #{$light-value};
+            $change-value: $change-value + $iterator;
+        }
+    }
+}
+
+.dark_mode {
+    color-scheme: dark;
+    @each $name, $value in $dark_mode {
+        --#{$name}: #{$value};
+        $change-value: $iterator;
+        @while $change-value <= $max-iteration {
+            $light-value: lighten($value, $change-value);
+            $dark-value: darken($value, $change-value);
+            --#{$name}-better-#{$change-value}: #{$light-value};
+            --#{$name}-worse-#{$change-value}: #{$dark-value};
+            $change-value: $change-value + $iterator;
+        }
+    }
+}

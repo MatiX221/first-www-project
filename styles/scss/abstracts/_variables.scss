@@ -1,0 +1,17 @@
+@use "sass:map";
+
+$transition: all 600ms -200ms ease-in-out;
+
+$breakpoints: (
+    small: 40rem,
+    medium: 60rem,
+    large: 90rem,
+);
+
+@mixin mq($key) {
+    $size: map.get($breakpoints, $key);
+
+    @media screen and (min-width: $size) {
+        @content;
+    }
+}
