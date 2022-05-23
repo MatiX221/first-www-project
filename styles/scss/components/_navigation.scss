@@ -80,11 +80,12 @@
                 display: flex;
                 flex-wrap: wrap;
                 li {
-                    margin: 0.5rem;
+                    margin: 0.75rem 0.5rem;
                     border-radius: 0.7rem;
                     &:hover {
                         transform: scale(1.1);
                         background-color: var(--body-bg-clr-better-15);
+                        box-shadow: 0 0 5px 1px var(--shadow);
                     }
                 }
             }

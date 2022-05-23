@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Smooch&display=swap");
 /* -better - darken in light mode / lighten in dark mode */
 /* -worse - lighten in light mode / darken in dark mode */
 :root {
@@ -30,13 +31,13 @@
   --text-clr-worse-10: #1a1a1a;
   --text-clr-better-15: black;
   --text-clr-worse-15: #262626;
-  --shadow: #000000;
-  --shadow-better-5: black;
-  --shadow-worse-5: #0d0d0d;
-  --shadow-better-10: black;
-  --shadow-worse-10: #1a1a1a;
-  --shadow-better-15: black;
-  --shadow-worse-15: #262626;
+  --shadow: #00eeff;
+  --shadow-better-5: #00d6e6;
+  --shadow-worse-5: #1af0ff;
+  --shadow-better-10: #00becc;
+  --shadow-worse-10: #33f1ff;
+  --shadow-better-15: #00a7b3;
+  --shadow-worse-15: #4df3ff;
   --card-bg-clr: #fff;
   --card-bg-clr-better-5: #f2f2f2;
   --card-bg-clr-worse-5: white;
@@ -250,8 +251,10 @@ input {
   color: var(--text-clr);
 }
 .header .heading h1 {
+  font-size: 2.5rem;
   -webkit-transition: all 600ms -200ms ease-in-out;
   transition: all 600ms -200ms ease-in-out;
+  font-family: "Smooch", cursive;
 }
 
 #theme_changer {
@@ -430,13 +433,15 @@ input {
         flex-wrap: wrap;
   }
   .nav__menu ul li {
-    margin: 0.5rem;
+    margin: 0.75rem 0.5rem;
     border-radius: 0.7rem;
   }
   .nav__menu ul li:hover {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
     background-color: var(--body-bg-clr-better-15);
+    -webkit-box-shadow: 0 0 5px 1px var(--shadow);
+            box-shadow: 0 0 5px 1px var(--shadow);
   }
 }
 
@@ -612,4 +617,14 @@ input {
 }
 .logo img {
   height: 1.5rem;
+}
+@media screen and (min-width: 40rem) {
+  .logo img {
+    height: 1.75rem;
+  }
+}
+@media screen and (min-width: 60rem) {
+  .logo img {
+    height: 2rem;
+  }
 }

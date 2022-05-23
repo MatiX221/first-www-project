@@ -24,5 +24,11 @@
     transform: rotate(-18deg);
     img {
         height: 1.5rem;
+        @include mq(small) {
+            height: 1.75rem;
+        }
+        @include mq(medium) {
+            height: 2rem;
+        }
     }
 }
