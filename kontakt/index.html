@@ -50,15 +50,15 @@
                     </div>
                     <form class="contact__form" action="mailto:mati0103pl229@gmail.com">
                         <label for="imie">Imię:</label>
-                        <input type="text" id="imie" name="imie" required />
+                        <input type="text" id="imie" name="imie" placeholder=" " pattern="[a-zA-Z]" required />
                         <label for="nazwisko">Nazwisko:</label>
-                        <input type="text" id="nazwisko" name="nazwisko" required />
+                        <input type="text" id="nazwisko" name="nazwisko" placeholder=" " pattern="[a-zA-Z]" required />
                         <label for="email">Email:</label>
-                        <input type="email" id="email" name="email" required />
+                        <input type="email" id="email" name="email" placeholder=" " required />
                         <label for="message">Wiadomość:</label>
                         <textarea id="message" name="message"></textarea>
-                        <input type="submit" value="Wyślij" />
-                        <input type="reset" value="Reset" />
+                        <input class="hover_effect" type="submit" value="Wyślij" />
+                        <input class="hover_effect" type="reset" value="Reset" />
                     </form>
                     <div class="side__photo kirito">
                         <img src="../images/kontakt/kirito.png" alt="" srcset="" />

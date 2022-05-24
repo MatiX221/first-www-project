@@ -18,6 +18,18 @@
         > * {
             margin-block: 0.5rem;
         }
+        .hover_effect:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+            border: 2px solid green;
+        }
+        input,
+        textarea {
+            border: 2px solid var(--border-clr);
+            &:invalid:not(:placeholder-shown) {
+                border: 2px solid red;
+            }
+        }
         input,
         textarea,
         label {

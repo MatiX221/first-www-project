@@ -6,8 +6,9 @@ $light-input-color: #abbe65;
 $light-body-bg-clr: #ffffff;
 $light-text-clr: #000;
 $light-shadow: #00eeff;
-$light-card-bg-clr: #ccc;
+$light-card-bg-clr: #ddd;
 $light-header-clr: #00a2ff;
+$light-border: #0075b9;
 
 $root: (
     input-back: $light-input-back,
@@ -17,6 +18,7 @@ $root: (
     shadow: $light-shadow,
     card-bg-clr: $light-card-bg-clr,
     header-clr: $light-header-clr,
+    border-clr: $light-border,
 );
 
 /// dark
@@ -26,8 +28,9 @@ $dark-input-color: #294797;
 $dark-body-bg-clr: #181818;
 $dark-text-clr: #fff;
 $dark-shadow: #00eeff;
-$dark-card-bg-clr: #000;
+$dark-card-bg-clr: #333;
 $dark-header-clr: #00eeff;
+$dark-border: #00eeff;
 
 $dark_mode: (
     input-back: $dark-input-back,
@@ -37,6 +40,7 @@ $dark_mode: (
     shadow: $dark-shadow,
     card-bg-clr: $dark-card-bg-clr,
     header-clr: $dark-header-clr,
+    border-clr: $dark-border,
 );
 
 $iterator: 5;

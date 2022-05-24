@@ -16,4 +16,18 @@
             grid-column: 2/3;
         }
     }
+    a {
+        text-decoration: none;
+        font-weight: bold;
+        transition: $transition;
+        &:link {
+            color: #00bdca;
+        }
+        &:visited {
+            color: #ff00f2;
+        }
+        &:hover {
+            text-shadow: -2px 3px 1px var(--text-clr);
+        }
+    }
 }
