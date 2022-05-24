@@ -38,13 +38,13 @@
   --shadow-worse-10: #33f1ff;
   --shadow-better-15: #00a7b3;
   --shadow-worse-15: #4df3ff;
-  --card-bg-clr: #fff;
-  --card-bg-clr-better-5: #f2f2f2;
-  --card-bg-clr-worse-5: white;
-  --card-bg-clr-better-10: #e6e6e6;
-  --card-bg-clr-worse-10: white;
-  --card-bg-clr-better-15: #d9d9d9;
-  --card-bg-clr-worse-15: white;
+  --card-bg-clr: #ccc;
+  --card-bg-clr-better-5: #bfbfbf;
+  --card-bg-clr-worse-5: #d9d9d9;
+  --card-bg-clr-better-10: #b3b3b3;
+  --card-bg-clr-worse-10: #e6e6e6;
+  --card-bg-clr-better-15: #a6a6a6;
+  --card-bg-clr-worse-15: #f2f2f2;
 }
 
 .dark_mode {
@@ -189,6 +189,7 @@ body {
   height: 100vh;
   width: 100vw;
   line-height: 1.4rem;
+  overflow-y: overlay;
 }
 body.dark_mode input,
 body.dark_mode textarea {
@@ -212,7 +213,7 @@ input {
 }
 
 .main {
-  padding: 0 1rem 1.5rem 1rem;
+  padding-bottom: 1.5rem;
   -webkit-transition: all 600ms -200ms ease-in-out;
   transition: all 600ms -200ms ease-in-out;
 }
@@ -227,6 +228,21 @@ input {
 .main p {
   -webkit-transition: all 600ms -200ms ease-in-out;
   transition: all 600ms -200ms ease-in-out;
+}
+
+::-webkit-scrollbar {
+  width: 1;
+  height: 0;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #00eeff;
+}
+
+::-webkit-scrollbar-thumb {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgb(255, 0, 0)), color-stop(18%, rgb(80, 255, 0)), color-stop(34%, rgb(46, 247, 223)), color-stop(48%, rgb(38, 78, 241)), color-stop(67%, rgb(244, 31, 148)), color-stop(85%, rgb(166, 89, 182)), to(rgb(255, 0, 0)));
+  background-image: linear-gradient(rgb(255, 0, 0) 0%, rgb(80, 255, 0) 18%, rgb(46, 247, 223) 34%, rgb(38, 78, 241) 48%, rgb(244, 31, 148) 67%, rgb(166, 89, 182) 85%, rgb(255, 0, 0) 100%);
+  border-radius: 2rem;
 }
 
 .header {
@@ -445,6 +461,28 @@ input {
   }
 }
 
+.side__photo {
+  display: none;
+  height: 18rem;
+  margin-top: 6rem;
+  margin-inline: auto;
+  position: sticky;
+  top: 25%;
+}
+.side__photo img {
+  height: 100%;
+}
+@media screen and (min-width: 60rem) {
+  .side__photo {
+    display: block;
+  }
+}
+@media screen and (min-width: 90rem) {
+  .side__photo {
+    height: 25rem;
+  }
+}
+
 .card {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -530,23 +568,50 @@ input {
   padding: 1rem;
 }
 
-.contact {
+.anime {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
-.contact__photo {
-  display: none;
-  height: 25rem;
-  margin-top: 2rem;
-  margin: auto;
+.anime .part {
+  background-color: var(--body-bg-clr-better-10);
 }
-.contact__photo img {
-  height: 100%;
+.anime table {
+  text-align: center;
+  padding: 0.5rem;
+  border-collapse: collapse;
+  width: min(100%, 40rem);
 }
-@media screen and (min-width: 90rem) {
-  .contact__photo {
-    display: block;
+.anime table td,
+.anime table th {
+  padding-block: 0.5rem;
+  border: 1px solid black;
+}
+.anime__content {
+  margin-inline: auto;
+  grid-column: 1/4;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-block: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: min(100%, 30rem);
+}
+@media screen and (min-width: 60rem) {
+  .anime__content {
+    grid-column: 2/3;
   }
+}
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 .contact__form {
   margin-inline: auto;
@@ -565,7 +630,7 @@ input {
           align-items: center;
   width: min(100%, 30rem);
 }
-@media screen and (min-width: 90rem) {
+@media screen and (min-width: 60rem) {
   .contact__form {
     grid-column: 2/3;
   }
@@ -586,6 +651,33 @@ input {
 }
 .contact__form #message {
   resize: none;
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.links__content {
+  margin-inline: auto;
+  grid-column: 1/4;
+  font-size: 1.4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-block: 2rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: min(100%, 30rem);
+}
+@media screen and (min-width: 60rem) {
+  .links__content {
+    grid-column: 2/3;
+  }
 }
 
 .footer {
@@ -611,7 +703,7 @@ input {
 .logo {
   position: fixed;
   bottom: 35px;
-  right: 0%;
+  right: 1rem;
   -webkit-transform: rotate(-18deg);
           transform: rotate(-18deg);
 }

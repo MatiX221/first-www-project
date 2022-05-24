@@ -1,0 +1,19 @@
+@use "../abstracts/variables" as *;
+
+.side__photo {
+    display: none;
+    height: 18rem;
+    margin-top: 6rem;
+    margin-inline: auto;
+    position: sticky;
+    top: 25%;
+    img {
+        height: 100%;
+    }
+    @include mq(medium) {
+        display: block;
+    }
+    @include mq(large) {
+        height: 25rem;
+    }
+}

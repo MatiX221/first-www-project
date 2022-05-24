@@ -1,9 +1,23 @@
 @use "../abstracts/variables" as *;
 
-.contact {
+.anime {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    &__form {
+    .part {
+        background-color: var(--body-bg-clr-better-10);
+    }
+    table {
+        text-align: center;
+        padding: 0.5rem;
+        border-collapse: collapse;
+        width: min(100%, 40rem);
+        td,
+        th {
+            padding-block: 0.5rem;
+            border: 1px solid black;
+        }
+    }
+    &__content {
         margin-inline: auto;
         grid-column: 1/4;
         font-size: 1.4rem;
@@ -14,22 +28,6 @@
         width: min(100%, 30rem);
         @include mq(medium) {
             grid-column: 2/3;
-        }
-        > * {
-            margin-block: 0.5rem;
-        }
-        input,
-        textarea,
-        label {
-            transition: $transition;
-            border-radius: 0.5rem;
-            width: 100%;
-        }
-        textarea {
-            height: 10rem;
-        }
-        #message {
-            resize: none;
         }
     }
 }
