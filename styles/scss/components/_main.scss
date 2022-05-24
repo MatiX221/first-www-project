@@ -1,0 +1,26 @@
+@use "../abstracts/variables" as *;
+
+.main__content {
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    img {
+        width: min(100%, 20rem);
+        box-shadow: 0 0 5px 1px var(--shadow);
+        margin-bottom: 1rem;
+        margin-inline: auto;
+    }
+    @include mq(small) {
+        display: block;
+        img {
+            width: min(30%, 10rem);
+            margin: 1rem;
+        }
+        .float_right {
+            float: right;
+        }
+        .float_left {
+            float: left;
+        }
+    }
+}

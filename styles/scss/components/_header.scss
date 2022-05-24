@@ -9,11 +9,11 @@
     background-color: var(--body-bg-clr);
     .heading {
         transition: $transition;
-        color: var(--text-clr);
+        color: var(--header-clr);
         padding-left: 1rem;
         a {
             text-decoration: none;
-            color: var(--text-clr);
+            color: var(--header-clr);
         }
         h1 {
             font-size: 2.5rem;
